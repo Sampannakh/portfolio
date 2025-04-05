@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Steps - Complete Your Portfolio</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #1e293b;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f172a;
+      }
+      .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background-color: #f8fafc;
+      }
+      .instruction {
+        background-color: #f0f9ff;
+        border-left: 4px solid #0369a1;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .code {
+        background-color: #0f172a;
+        color: #f8fafc;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: monospace;
+        line-height: 1.5;
+      }
+      .tip {
+        background-color: #fef9c3;
+        border-left: 4px solid #ca8a04;
+        padding: 10px 15px;
+        margin: 15px 0;
+      }
+      .success {
+        background-color: #dcfce7;
+        border-left: 4px solid #166534;
+        padding: 10px 15px;
+        margin: 15px 0;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .checklist {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .checklist li {
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 15px;
+      }
+      .checklist li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #166534;
+        background-color: #dcfce7;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+      .step {
+        counter-increment: step-counter;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 40px;
+      }
+      .step:before {
+        content: counter(step-counter);
+        background-color: #0369a1;
+        color: white;
+        font-weight: bold;
+        padding: 0;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Complete Your Photography Portfolio</h1>
+
+    <div class="section">
+      <h2>Current Progress</h2>
+      <div class="success">
+        <p>
+          <strong>Great progress so far!</strong> You've successfully added:
+        </p>
+        <ul class="checklist">
+          <li>Hero background image (hero-background.JPG)</li>
+          <li>Profile image (profile.jpeg)</li>
+          <li>Contact background image (contact-background.jpg)</li>
+        </ul>
+      </div>
+
+      <p>Let's add the remaining portfolio images to complete your website.</p>
+    </div>
+
+    <div class="section">
+      <h2>Adding Your Portfolio Project Images</h2>
+
+      <div class="instruction">
+        <div class="step">
+          <h3>Prepare your portfolio images</h3>
+          <p>
+            Select three high-quality images that represent your photography
+            work:
+          </p>
+          <ul>
+            <li>For the Portrait Series: A striking portrait photo</li>
+            <li>
+              For the Brand Campaign: A commercial/brand-related photo or video
+              still
+            </li>
+            <li>
+              For the Cinematic Short Film: A cinematic still or film scene
+            </li>
+          </ul>
+          <div class="tip">
+            <p>
+              <strong>Tip:</strong> For optimal display, resize your images to
+              800x600 pixels and compress them for the web.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <h3>Rename your files (optional but recommended)</h3>
+          <p>Rename your images to make them easier to identify:</p>
+          <ul>
+            <li>
+              <code>portrait-series.jpg</code> - For your portrait photography
+            </li>
+            <li><code>brand-campaign.jpg</code> - For your commercial work</li>
+            <li><code>short-film.jpg</code> - For your cinematic work</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <h3>Add images to the portfolio folder</h3>
+          <p>
+            Copy your three portfolio images to the
+            <code>assets/images/portfolio/</code> folder.
+          </p>
+          <p>You can do this by:</p>
+          <ul>
+            <li>
+              Using the file explorer/finder to navigate to your project folder
+            </li>
+            <li>
+              Go to <code>assets</code> → <code>images</code> →
+              <code>portfolio</code>
+            </li>
+            <li>Copy your three images into this folder</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <h3>Update your HTML file</h3>
+          <p>
+            Open the <code>index.html</code> file and update the three project
+            cards to use your actual images:
+          </p>
+          <p>
+            Find these sections (around lines 191-280) and change the image
+            sources:
+          </p>
+
+          <div class="code">
+            <!-- Project 1 -->
+            &lt;div class="project-card" data-category="photo"&gt; &lt;div
+            class="project-image"&gt; &lt;img
+            src="assets/images/portfolio/portrait-series.jpg" alt="Portrait
+            Photography" /&gt; &lt;!-- rest of the project card code --&gt;
+            &lt;/div&gt; &lt;/div&gt;
+
+            <!-- Project 2 -->
+            &lt;div class="project-card" data-category="video"&gt; &lt;div
+            class="project-image"&gt; &lt;img
+            src="assets/images/portfolio/brand-campaign.jpg" alt="Video
+            Campaign" /&gt; &lt;!-- rest of the project card code --&gt;
+            &lt;/div&gt; &lt;/div&gt;
+
+            <!-- Project 3 -->
+            &lt;div class="project-card" data-category="cinema"&gt; &lt;div
+            class="project-image"&gt; &lt;img
+            src="assets/images/portfolio/short-film.jpg" alt="Short Film" /&gt;
+            &lt;!-- rest of the project card code --&gt; &lt;/div&gt;
+            &lt;/div&gt;
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Troubleshooting</h2>
+
+      <h3>If your images don't appear:</h3>
+      <ul>
+        <li>
+          <strong>Check the file path</strong> - Make sure the path in HTML
+          matches exactly where you placed the files
+        </li>
+        <li>
+          <strong>Check file names</strong> - File names are case-sensitive, so
+          make sure the case matches exactly (e.g., "Portrait-Series.jpg" is not
+          the same as "portrait-series.jpg")
+        </li>
+        <li>
+          <strong>Check file extensions</strong> - Make sure you're using the
+          correct extension (.jpg, .jpeg, .png)
+        </li>
+        <li>
+          <strong>Browser cache</strong> - Try hard-refreshing your browser
+          (Ctrl+F5 or Cmd+Shift+R)
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Final Checklist</h2>
+      <p>
+        Once you've added all your portfolio images, your website will be
+        complete with:
+      </p>
+      <ul>
+        <li>✓ Hero background image</li>
+        <li>✓ Profile image in the About section</li>
+        <li>✓ Contact section background</li>
+        <li>✓ Three portfolio project images</li>
+      </ul>
+      <div class="tip">
+        <p>
+          <strong>Next steps for the future:</strong> Consider adding more
+          project cards or creating a lightbox gallery for your portfolio images
+          to showcase more of your work!
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Your photographer portfolio website is looking great! If you need any
+        further assistance, feel free to reach out.
+      </p>
+    </footer>
+  </body>
+</html>

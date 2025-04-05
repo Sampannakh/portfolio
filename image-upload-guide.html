@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Upload Guide for Photography Portfolio</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #1e293b;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0f172a;
+      }
+      .step {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        background-color: #f8fafc;
+      }
+      code {
+        background-color: #e2e8f0;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #0f172a;
+        color: #f8fafc;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+      }
+      .image-example {
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px dashed #94a3b8;
+        border-radius: 8px;
+        background-color: #f1f5f9;
+      }
+      .image-example img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .file-structure {
+        font-family: monospace;
+        line-height: 1.5;
+      }
+      .tip {
+        background-color: #fef9c3;
+        border-left: 4px solid #ca8a04;
+        padding: 10px 15px;
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>How to Add Images to Your Photography Portfolio</h1>
+
+    <div class="step">
+      <h2>Step 1: Prepare Your Image Files</h2>
+      <p>
+        Before adding images to your portfolio, make sure they are properly
+        prepared:
+      </p>
+      <ul>
+        <li>Use high-quality but optimized images (compressed for web)</li>
+        <li>Maintain consistent aspect ratios for similar image types</li>
+        <li>
+          Name your files descriptively (e.g.,
+          <code>portrait-session-2023.jpg</code> rather than
+          <code>IMG12345.jpg</code>)
+        </li>
+      </ul>
+
+      <div class="tip">
+        <strong>Pro Tip:</strong> Use online tools like TinyPNG or Squoosh to
+        compress your images without losing visible quality.
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Step 2: Organize Your Images in the Correct Folders</h2>
+      <p>Your portfolio website uses this folder structure:</p>
+      <pre class="file-structure">
+portfolio/
+├── assets/
+│   ├── images/            # Main images folder
+│   │   ├── portfolio/     # Portfolio project images
+│   │   ├── profile.jpg    # Your profile/about image
+│   │   ├── hero-background.jpg  # Hero section background
+│   │   └── contact-background.jpg  # Contact section background
+├── index.html
+├── style.css
+└── script.js</pre
+      >
+
+      <p>
+        Make sure to place your images in the appropriate folders based on their
+        purpose.
+      </p>
+    </div>
+
+    <div class="step">
+      <h2>Step 3: Update HTML to Include Your Images</h2>
+      <p>To add a profile image to the About section:</p>
+      <pre>
+&lt;div class="about-image-container"&gt;
+  &lt;img
+    src="assets/images/profile.jpg"
+    alt="Sampanna Khanal - Photographer portrait"
+  /&gt;
+&lt;/div&gt;</pre
+      >
+
+      <p>To add a portfolio project image:</p>
+      <pre>
+&lt;div class="project-card" data-category="photo"&gt;
+  &lt;div class="project-image"&gt;
+    &lt;img
+      src="assets/images/portfolio/portrait-series.jpg"
+      alt="Portrait Photography"
+    /&gt;
+    &lt;!-- rest of the project card code --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre
+      >
+    </div>
+
+    <div class="step">
+      <h2>Step 4: Update CSS for Background Images</h2>
+      <p>
+        To change the hero background image, update the CSS in
+        <code>style.css</code>:
+      </p>
+      <pre>
+.hero {
+  background: url('assets/images/hero-background.jpg') no-repeat center center;
+  background-size: cover;
+}</pre
+      >
+
+      <p>To change the contact section background:</p>
+      <pre>
+.contact::before {
+  background: url('assets/images/contact-background.jpg') no-repeat center center;
+  background-size: cover;
+}</pre
+      >
+    </div>
+
+    <div class="step">
+      <h2>Example: Before and After</h2>
+      <div class="image-example">
+        <h3>Placeholder Image (Before)</h3>
+        <img
+          src="https://placehold.co/800x600/111827/f3f4f6?text=Placeholder+Image"
+          alt="Placeholder Image"
+        />
+      </div>
+
+      <div class="image-example">
+        <h3>Your Custom Image (After)</h3>
+        <p>Replace with your own high-quality photography:</p>
+        <img
+          src="https://placehold.co/800x600/111827/f3f4f6?text=Your+Photography"
+          alt="Your Photography"
+        />
+
+        <div class="tip">
+          <strong>Remember:</strong> Use actual file paths like
+          <code>assets/images/portfolio/your-image.jpg</code> when you add your
+          own images.
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <h2>Recommended Image Sizes</h2>
+      <ul>
+        <li>
+          <strong>Hero Background:</strong> 1920 × 1080 pixels (16:9 ratio)
+        </li>
+        <li>
+          <strong>About/Profile Image:</strong> 800 × 1000 pixels (4:5 ratio)
+        </li>
+        <li>
+          <strong>Portfolio Project Images:</strong> 800 × 600 pixels (4:3
+          ratio)
+        </li>
+        <li>
+          <strong>Contact Background:</strong> 1920 × 1080 pixels (16:9 ratio)
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>
+        For more information, refer to the README.md file or contact
+        <a href="mailto:khanallucky08@gmail.com">khanallucky08@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
